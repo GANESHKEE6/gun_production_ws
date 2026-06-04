@@ -1,0 +1,48 @@
+# Weapon Manual: Bolt-Action Sniper Rifle
+
+## Overview
+The Bolt-Action Sniper Rifle is a precision weapon system designed for extreme long-range engagements. It prioritizes single-shot lethality, accuracy, and structural rigidity over rate of fire.
+
+## Technical Specifications
+- **Compatible Calibers**: .338 Lapua Magnum, 7.62x51mm NATO.
+- **Safety Compatibility Warning**: NEVER attempt to chamber small 5.56x45mm rounds or shotgun shells in a .338 caliber rifle. It will cause head-space failures, cartridge rupture, and gas blowback.
+- **Base Rate of Fire**: 30 rounds per minute (RPM) (Manual bolt-action cycle).
+- **Muzzle Velocity**: 870 m/s (with standard .338 Lapua Magnum and Standard barrel).
+
+## Component Compatibility & Specifications
+
+### 1. Barrel Options
+- **Short Barrel (20.0 inch)**: Compact precision barrel. Easier to carry but increases recoil by 15% and drops muzzle velocity. Effective range: 700 meters.
+- **Standard Barrel (24.0 inch)**: Standard police/military sniper barrel. Excellent thermal dissipation and harmonic balance. Effective range: 1000 meters.
+- **Heavy Match Barrel (27.0 inch)**: Long, fluted, heavy-contour barrel. Maximizes projectile spin stability, decreases recoil by 20%, and extends effective range to 1400 meters.
+
+### 2. Stock Options
+- **Heavy Sniper Stock**: Fully adjustable tactical chassis. Adjustable cheek riser and buttpad. Heaviest option, but absorbs 25% recoil and provides absolute stability.
+- **Tactical Stock**: Lightweight skeletonized folding chassis. Reduces overall weapon weight, but offers standard recoil mitigation.
+- **Classic Wood Stock**: Walnut wood stock. Solid feel, heavy weight, provides good natural dampening (-10% recoil) but lacks custom adjustability.
+
+### 3. Optics Options
+- **ACOG Scope (4x)**: Small tactical scope. Used for scout roles. Fast target acquisition, but severely limits extreme long-range viability.
+- **Sniper Scope (12x-24x Variable)**: High-precision optics with parallax adjustment and illuminated Mil-Dot reticle. Boosts long-range accuracy by 80%.
+- **Thermal Sniper Scope**: Displays thermal signatures of targets. Perfect for night operations. Heavy and slightly less optical clarity than standard scopes (+50% accuracy).
+
+### 4. Ammunition Profiles
+- **.338 Lapua Standard (250 gr FMJ)**: Standard match-grade round. Devastating kinetic energy, high velocity, and extreme accuracy.
+- **.338 Lapua AP (Armor Piercing)**: Tungsten-carbide core. Bypasses 85% of armor plates and cover, high damage, but increases wear on match barrels.
+- **7.62x51mm NATO (Light Round)**: Fits the receiver via adapter. Reduces muzzle velocity and damage by 20%, but drops vertical recoil by 40% for faster follow-up shots.
+
+## Step-by-Step Assembly Instructions
+1. **Chassis Setup**: Secure the main sniper chassis/stock in the soft-jawed assembly clamp.
+2. **Receiver Placement**: Drop the heavy bolt-action receiver into the chassis inletting, lining up the action screw holes. Torque action screws to 65 in-lbs.
+3. **Trigger Installation**: Pin the match trigger assembly to the bottom of the receiver. Adjust pull weight to a crisp 2.5 lbs.
+4. **Barrel Fitment**: Thread the heavy match barrel into the receiver threads. Verify head-spacing using "Go" and "No-Go" precision gauges. Torque barrel nut to 75 ft-lbs.
+5. **Bolt Insertion**: Insert the cylindrical bolt assembly into the rear of the receiver, checking that the extractor claw is properly aligned.
+6. **Bipod Attachment**: Mount the adjustable folding bipod to the forward spigot or Picatinny rail of the chassis.
+7. **Magazine Well**: Insert the single-stack box magazine into the magwell, locking the primary latch.
+8. **Optic Scope Mount**: Install the heavy-duty scope ring mounts onto the receiver Picatinny rail. Set the Sniper Scope inside the rings, align vertical crosshairs, and torque ring caps to 15 in-lbs.
+
+## Ballistics Performance Formulas
+- **Accuracy Score**: Base (95) + Optics Bonus (SniperScope: +35, ACOG: +10) + Barrel Length (HeavyMatch: +15, Short: -5)
+- **Recoil Value**: Base (70) + Stock Factor (HeavySniper: -20, Wood: -8, Tactical: 0) + Caliber Factor (7.62mm: -25, .338Lapua: 0)
+- **Muzzle Damage**: Base (98) + Ammo Modifier (.338 Standard: 0, 7.62mm: -20, AP: +5)
+- **Effective Range**: Base (1000m) * Barrel Factor (HeavyMatch: 1.4, Short: 0.7)

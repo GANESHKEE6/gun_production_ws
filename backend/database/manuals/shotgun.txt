@@ -1,0 +1,49 @@
+# Weapon Manual: Pump-Action Shotgun
+
+## Overview
+The Pump-Action Shotgun is a robust, manual utility weapon designed for close-range devastating firepower. It uses a sliding forend to cycle ammunition from an under-barrel tubular magazine.
+
+## Technical Specifications
+- **Compatible Calibers**: 12 Gauge Buckshot, 12 Gauge Slug.
+- **Safety Compatibility Warning**: NEVER load rifle calibers (5.56mm, 7.62mm, .338) or pistol ammunition into a 12 gauge shotgun chamber. The barrel bore is too wide, preventing sealing, causing catastrophic gas leaks, and rendering the weapon inoperable.
+- **Base Rate of Fire**: 50 rounds per minute (RPM) (Pump cycle action).
+- **Muzzle Velocity**: 400 m/s (with standard 12g Buckshot).
+
+## Component Compatibility & Specifications
+
+### 1. Barrel Options
+- **Short Barrel (14.0 inch - Breacher)**: Short, non-choked barrel. Maximizes pellet dispersion (wide spread) and handling speed. Increases recoil by 20%. Effective range: 20 meters.
+- **Standard Barrel (18.5 inch - Tactical)**: Cylinder bore barrel. Offers a tight but effective close-combat spread. Standard recoil. Effective range: 40 meters.
+- **Long Barrel (28.0 inch - Hunting)**: Features a modified choke. Restricts pellet spread to a dense cluster, boosting range by 50% and absorbing 15% recoil. Reduces close-quarters target tracking speed. Effective range: 75 meters.
+
+### 2. Stock Options
+- **Tactical Stock**: Features a separate pistol grip and modern composite stock with an integrated recoil spring buffer. Drops recoil by 10% and improves weapon handling.
+- **Folding Stock**: Minimalist folding wire stock. Maximizes close-range maneuvering, but increases recoil by 25% and causes significant weapon sway.
+- **Classic Wood Stock**: Traditional solid walnut stock. Provides excellent cheek weld and shoulder stability. Absorbs 10% recoil.
+
+### 3. Optics Options
+- **Bead Sight / Iron Sights**: Simple metal bead at the end of the barrel. Fastest targeting speed for close moving targets.
+- **Red Dot Sight**: Wide aperture reflex sight. Excellent for aiming 12 Gauge solid slugs at medium ranges.
+- **ACOG Scope (4x)**: Strongly NOT recommended. Heavy recoil will cause the scope eyepiece to strike the operator's eye during firing. Reduces target acquisition speed by 50%.
+
+### 4. Ammunition Profiles
+- **12 Gauge 00 Buckshot**: Fires 9 heavy lead pellets in a cone-shaped scatter pattern. Extremely lethal at close range (deals 9x damage points).
+- **12 Gauge Sabot Slug**: A single solid lead projectile. Eliminates pellet spread. Increases effective range by 150%, improves accuracy by 60%, but requires precise aiming.
+- **12 Gauge Dragon's Breath**: Fires magnesium pellets that ignite upon contact with air, creating a flame spray. Deals high elemental damage and disorients targets, but lacks armor penetration.
+
+## Step-by-Step Assembly Instructions
+1. **Receiver Hold**: Insert the main shotgun receiver block into the assembly cradle.
+2. **Forend & Action Bars**: Slide the action bar assembly of the synthetic forend onto the magazine tube.
+3. **Slide Rails**: Fit the action slide bars into the corresponding channels inside the receiver.
+4. **Magazine Tube Mount**: Thread the steel magazine tube into the front receiver threads and tighten with a spanner.
+5. **Barrel Seating**: Slip the barrel rear extension into the receiver chamber while threading the barrel guide ring over the magazine tube. Push back until flush.
+6. **Magazine Cap**: Screw the threaded magazine cap onto the end of the tube to clamp the barrel assembly in place.
+7. **Trigger Assembly**: Insert the trigger group from the bottom of the receiver and push in the two locking trigger pins.
+8. **Buttstock Attachment**: Bolt the buttstock assembly to the rear of the receiver action bolt using a long screwdriver.
+9. **Sights Fitting**: Clip the front bead sight onto the ventilated barrel rib, or mount the red dot onto the receiver rail if applicable.
+
+## Ballistics Performance Formulas
+- **Accuracy Score**: Base (50) + Optics Bonus (RedDot: +20, Bead: 0, ACOG: -15) + Barrel Length (Long: +15, Short: -10) + Ammo Modifier (Slug: +30, Buckshot: 0)
+- **Recoil Value**: Base (80) + Stock Factor (Tactical: -10, Wood: -8, Folding: +20) + Caliber Factor (Slug: +10, Buckshot: 0)
+- **Muzzle Damage**: Base (120 - spread damage) + Ammo Modifier (Slug: -30, Dragon: -20)
+- **Effective Range**: Base (40m) * Barrel Factor (Long: 1.8, Short: 0.5) * Ammo Factor (Slug: 2.5, Buckshot: 1.0)

@@ -1,0 +1,48 @@
+# Weapon Manual: Light Machine Gun (LMG / Belt-Fed)
+
+## Overview
+The Light Machine Gun is a heavy, belt-fed squad automatic weapon designed to provide high volumes of suppressive fire. It features a quick-change barrel system to mitigate thermal overload.
+
+## Technical Specifications
+- **Compatible Calibers**: 7.62x51mm NATO, 5.56x45mm NATO.
+- **Safety Compatibility Warning**: NEVER load .338 sniper rounds or 12 Gauge shotgun shells into the belt-link ammunition feed tray. Doing so will crush the links, jam the feed pawls, and lock the bolt assembly, disabling the weapon.
+- **Base Rate of Fire**: 850 rounds per minute (RPM).
+- **Muzzle Velocity**: 850 m/s (with standard 7.62mm NATO).
+
+## Component Compatibility & Specifications
+
+### 1. Barrel Options
+- **Short Barrel (16.0 inch - Para)**: Designed for mobile paratroopers. Compact and fast handling, but heats up 30% faster and increases vertical climb. Effective range: 500 meters.
+- **Standard Barrel (20.0 inch)**: Balanced profile. Standard rate of fire and thermal cooling. Effective range: 800 meters.
+- **Heavy Fluted Barrel (24.0 inch)**: Extra-thick fluted barrel. Maximizes heat dissipation, allowing for 50% longer bursts before overheating. Reduces recoil by 15%. Effective range: 1200 meters.
+
+### 2. Stock Options
+- **Heavy Tactical Stock**: Fixed composite stock with steel shoulder rest. Provides maximum bracing for sustained fire, reducing recoil by 15%.
+- **Para Folding Stock**: Lightweight sliding aluminum stock. Enhances weapon handling, but increases recoil by 15% during automatic fire.
+- **Spade Grips**: Replaces the buttstock and pistol grip. Designed for mounted tripod use. Reduces recoil by 30% and weapon sway by 50% when stationary.
+
+### 3. Optics Options
+- **Iron Sights**: Robust, open leaf sights adjustable for windage and elevation. Reliable under dust and heat.
+- **Red Dot Sight**: Reflex combat sight. Speeds up close-range aiming but does not aid in identifying target distance.
+- **ACOG Scope (4x)**: Tactical 4x optic. Highly recommended for LMG gunners, boosting suppressive accuracy at mid-range by 35%.
+
+### 4. Ammunition Profiles
+- **7.62mm FMJ Linked Belt**: Standard linked belt. Combines deep penetration, heavy target impact, and high stopping power.
+- **7.62mm AP Linked Belt (M993)**: Armor-piercing belt. Easily punctures armor plating and cover, but runs the barrel temperature 20% hotter.
+- **7.62mm Tracer Belt (4:1 Mix)**: Integrates one glowing tracer round every five rounds. Visual aid increases accuracy by 25% during sustained fire bursts.
+
+## Step-by-Step Assembly Instructions
+1. **Receiver Placement**: Place the heavy steel receiver assembly onto the assembly station.
+2. **Piston & Bolt Group**: Insert the gas piston tube into the lower receiver channel. Slide the Bolt Carrier and bolt group into the receiver rails.
+3. **Barrel Mating**: Insert the barrel rear lug into the receiver gate. Pull down the Barrel Locking Lever to lock it tightly.
+4. **Bipod Mounting**: Clamp the folding steel bipod assembly onto the forward gas cylinder collar.
+5. **Stock Mounting**: Slip the stock adapter into the rear receiver housing and lock it using the two take-down pins.
+6. **Feed Tray Installation**: Lift the Feed Cover. Install the ammunition Feed Tray and ensure the feed pawls slide freely. Close the feed cover until the latch clicks.
+7. **Optic Placement**: Fit the optic base over the feed cover Picatinny rail and lock the mounting levers.
+8. **Ammo Box Attachment**: Mount the 100-round polymer ammunition box container onto the mounting bracket on the left side of the receiver. Feed the leading brass cartridge link onto the tray and close the feed cover.
+
+## Ballistics Performance Formulas
+- **Accuracy Score**: Base (65) + Optics Bonus (ACOG: +20, RedDot: +5) + Barrel Length (HeavyFluted: +10, Short: -10) + Ammo Modifier (Tracer: +15, AP: 0)
+- **Recoil Value**: Base (55) + Stock Factor (SpadeGrips: -20, Heavy: -8, Para: +10) + Caliber Factor (7.62mm: +10, 5.56mm: -5)
+- **Muzzle Damage**: Base (55) + Ammo Modifier (7.62mm FMJ: 0, 5.56mm: -15, AP: +5)
+- **Effective Range**: Base (800m) * Barrel Factor (HeavyFluted: 1.3, Short: 0.7)

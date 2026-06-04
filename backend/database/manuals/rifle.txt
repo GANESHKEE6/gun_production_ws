@@ -1,0 +1,48 @@
+# Weapon Manual: Assault Rifle (AR Platform)
+
+## Overview
+The Assault Rifle (AR platform) is a highly modular, lightweight, gas-operated shoulder-fired weapon. It is designed for versatile engagement profiles from close-quarters battle (CQB) to mid-range marksmanship.
+
+## Technical Specifications
+- **Compatible Calibers**: 5.56x45mm NATO, .300 AAC Blackout.
+- **Safety Compatibility Warning**: NEVER chamber 7.62x51mm NATO or 12 Gauge rounds in an AR-15 receiver. Doing so will cause catastrophic mechanical failure, chamber explosion, and severe operator injury.
+- **Base Rate of Fire**: 750 rounds per minute (RPM).
+- **Muzzle Velocity**: 900 m/s (with standard 5.56mm NATO and Standard barrel).
+
+## Component Compatibility & Specifications
+
+### 1. Barrel Options
+- **Short Barrel (10.5 inch)**: Optimal for Close Quarters Combat. Reduces weapon weight and improves handling speed. Increases recoil by 25% and reduces effective range to 150 meters.
+- **Standard Barrel (14.5 inch)**: The baseline military standard. Offers optimal balance between muzzle velocity, weight, and recoil control. Effective range: 350 meters.
+- **Long Barrel (18.0 inch)**: Designed for designated marksman roles. Maximizes muzzle velocity, increases accuracy by 15%, and dampens recoil by 10%. Adds weapon weight and reduces maneuvering speed. Effective range: 600 meters.
+
+### 2. Stock Options
+- **Tactical Stock**: Standard telescoping composite stock. Offers adjustable length of pull and balanced recoil absorption.
+- **Folding Stock**: Minimalist design. Folds to the side to maximize portability in compact spaces. Increases vertical recoil by 20% due to reduced mass.
+- **Heavy Stock**: Features a weighted core and thick rubber recoil pad. Maximizes weapon stability, reducing recoil by 15% and camera shake during firing.
+
+### 3. Optics Options
+- **Iron Sights**: Standard mechanical sights. Offers clear field of view, no batteries required, and quick alignment at close range.
+- **Red Dot Sight**: Electronic reflex sight with 1x magnification. Increases close-range target acquisition speed by 30% and reduces aiming time.
+- **ACOG Scope (4x)**: Fixed 4x magnification scope with bullet drop compensator. Perfect for mid-range engagements, boosting accuracy at 200m+ by 40%.
+
+### 4. Ammunition Profiles
+- **5.56mm FMJ (Full Metal Jacket)**: Standard lead-core ammunition. Balanced velocity, reliable feed, and moderate damage against soft targets.
+- **5.56mm AP (Armor Piercing - M855A1)**: Hardened steel penetrator tip. Bypasses up to 50% target armor rating, but deals 10% less raw damage to unarmored targets.
+- **.300 Blackout Subsonic (Heavy Bullet)**: Heavy 220-grain bullet traveling below the speed of sound. Extremely quiet, reduces recoil by 15%, and increases close-range impact damage by 20%, but drops rapidly past 100 meters.
+
+## Step-by-Step Assembly Instructions
+1. **Lower Receiver Mount**: Place the lower receiver firmly on the assembly fixture.
+2. **Bolt & Charging Handle**: Slide the Charging Handle into the upper receiver groove, followed by the Bolt Carrier Group (BCG) in the unlocked position.
+3. **Upper-Lower Mating**: Pivot the upper receiver onto the lower receiver, aligning the pivot hinges. Push the front Pivot Pin and rear Takedown Pin in until they click flush.
+4. **Barrel Installation**: Thread the barrel extension into the upper receiver indexing pin. Slip the Barrel Nut over the barrel and torque to 45 ft-lbs.
+5. **Handguard Attachment**: Slide the tactical handguard over the barrel and secure it to the barrel nut using the hex screws.
+6. **Stock Installation**: Thread the buffer tube into the rear of the receiver, insert the buffer spring and buffer, and slide the adjustable stock assembly onto the tube.
+7. **Magazine Insertion**: Push the magazine into the magazine well until the magazine catch locks it with an audible click.
+8. **Optic Mount**: Fit the optic base to the top Picatinny rail and clamp it down to 25 in-lbs.
+
+## Ballistics Performance Formulas
+- **Accuracy Score**: Base (80) + Optics Bonus (RedDot: +5, ACOG: +15) + Barrel Length (Long: +10, Short: -10)
+- **Recoil Value**: Base (30) + Stock Factor (Heavy: -5, Folding: +8) + Caliber Factor (.300 Blackout: -3, 5.56mm: 0)
+- **Muzzle Damage**: Base (45) + Ammo Modifier (Subsonic: +10, AP: -5)
+- **Effective Range**: Base (350m) * Barrel Factor (Long: 1.5, Short: 0.6)

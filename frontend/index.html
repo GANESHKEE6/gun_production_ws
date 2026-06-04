@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.R.M.S. | Multi-Agent Weapon Customization & Shooting Range</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Space+Grotesque:wght@400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="tactical-theme">
+    <div class="hud-scanline"></div>
+    <div class="hud-vignette"></div>
+
+    <!-- MAIN HEADER -->
+    <header class="tactical-header">
+        <div class="brand">
+            <div class="logo-icon"></div>
+            <h1>A.R.M.S.</h1>
+            <span class="header-divider">|</span>
+            <span class="sub-title">Ammunition & Weapon assembly Platform</span>
+        </div>
+        <div class="system-status">
+            <span class="status-indicator online"></span>
+            <span class="status-text">MULTI-AGENT CORE: OPERATIONAL</span>
+        </div>
+    </header>
+
+    <!-- MAIN INTERFACE WORKSPACE -->
+    <main class="tactical-workspace">
+        
+        <!-- STEP CONTROLS / NAV -->
+        <nav class="hud-tabs">
+            <button class="hud-tab active" id="tab-design" onclick="switchTab('design')">
+                <span class="tab-num">01</span> DESIGN SPECIFICATION
+            </button>
+            <button class="hud-tab" id="tab-assembly" onclick="switchTab('assembly')" disabled>
+                <span class="tab-num">02</span> ASSEMBLY BAY
+            </button>
+            <button class="hud-tab" id="tab-range" onclick="switchTab('range')" disabled>
+                <span class="tab-num">03</span> BALLISTICS RANGE
+            </button>
+        </nav>
+
+        <div class="workspace-body">
+            
+            <!-- LEFT PANEL: WORK AREA -->
+            <div class="workspace-left">
+
+                <!-- TAB 1: DESIGN -->
+                <section class="tab-content active" id="content-design">
+                    <div class="panel-header">
+                        <h2>WEAPON SCHEMATIC DESIGNER</h2>
+                        <span class="panel-subtitle">Select weapon class and customize engineering specifications</span>
+                    </div>
+
+                    <!-- Gun Type Selection Grid -->
+                    <div class="gun-selector-grid">
+                        <div class="gun-card" onclick="selectGunType('rifle')" id="card-rifle">
+                            <div class="gun-card-icon rifle-icon"></div>
+                            <h3>Assault Rifle</h3>
+                            <p>AR Platform, 5.56mm / .300 BLK, modular gas system</p>
+                        </div>
+                        <div class="gun-card" onclick="selectGunType('sniper')" id="card-sniper">
+                            <div class="gun-card-icon sniper-icon"></div>
+                            <h3>Sniper Rifle</h3>
+                            <p>Bolt-Action precision chassis, .338 Lapua, extreme range</p>
+                        </div>
+                        <div class="gun-card" onclick="selectGunType('shotgun')" id="card-shotgun">
+                            <div class="gun-card-icon shotgun-icon"></div>
+                            <h3>Pump Shotgun</h3>
+                            <p>12 Gauge smoothbore cylinder, heavy buckshot load</p>
+                        </div>
+                        <div class="gun-card" onclick="selectGunType('machine_gun')" id="card-machine_gun">
+                            <div class="gun-card-icon mg-icon"></div>
+                            <h3>Machine Gun</h3>
+                            <p>7.62mm Belt-fed squad automatic, rapid suppressive fire</p>
+                        </div>
+                        <div class="gun-card" onclick="selectGunType('gatling_gun')" id="card-gatling_gun">
+                            <div class="gun-card-icon gatling-icon"></div>
+                            <h3>Gatling Gun</h3>
+                            <p>Rotary 6-barrel machine gun, 24V electric drive motor</p>
+                        </div>
+                    </div>
+
+                    <!-- Custom Specs Grid -->
+                    <div class="customization-area locked" id="customization-panel">
+                        <div class="customization-columns">
+                            <!-- Left Controls -->
+                            <div class="specs-form">
+                                <h3>COMPONENT SPECIFICATION</h3>
+                                <div class="form-group">
+                                    <label for="spec-caliber">Ammunition Caliber</label>
+                                    <select id="spec-caliber" onchange="updateBlueprint()"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="spec-barrel">Barrel Configuration</label>
+                                    <select id="spec-barrel" onchange="updateBlueprint()"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="spec-stock">Stock Structure</label>
+                                    <select id="spec-stock" onchange="updateBlueprint()"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="spec-optics">Sighting Optics</label>
+                                    <select id="spec-optics" onchange="updateBlueprint()"></select>
+                                </div>
+                                <button class="btn-primary glow-orange" id="btn-validate" onclick="validateDesign()">
+                                    ANALYZE DESIGN BLUEPRINT
+                                </button>
+                            </div>
+
+                            <!-- Right Blueprint Preview -->
+                            <div class="blueprint-preview-container">
+                                <div class="blueprint-grid-overlay"></div>
+                                <span class="blueprint-corner tl">+</span>
+                                <span class="blueprint-corner tr">+</span>
+                                <span class="blueprint-corner bl">+</span>
+                                <span class="blueprint-corner br">+</span>
+                                <div class="blueprint-header-text">W-SCHEMATIC // BLU-PRNT</div>
+                                <div class="blueprint-canvas-wrapper">
+                                    <!-- Dynamic SVG Blueprint of custom parts -->
+                                    <svg id="blueprint-svg" viewBox="0 0 800 300"></svg>
+                                </div>
+                                <div class="blueprint-footer-text" id="blueprint-footer">CALIBER: UNLOCKED // BARREL: UNLOCKED</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TAB 2: ASSEMBLY BAY -->
+                <section class="tab-content" id="content-assembly">
+                    <div class="panel-header">
+                        <h2>ASSEMBLY BAY (SEC: 04)</h2>
+                        <span class="panel-subtitle">Follow real-time assembly sequence coordinated by Lead Assembly Engineer</span>
+                    </div>
+
+                    <div class="assembly-bay-workspace">
+                        <!-- Main Graphic Canvas -->
+                        <div class="assembly-canvas-container">
+                            <div class="blueprint-grid-overlay"></div>
+                            <span class="blueprint-corner tl">+</span>
+                            <span class="blueprint-corner tr">+</span>
+                            <span class="blueprint-corner bl">+</span>
+                            <span class="blueprint-corner br">+</span>
+                            
+                            <!-- Large Canvas for parts sliding in -->
+                            <div class="assembly-animation-wrapper">
+                                <svg id="assembly-svg" viewBox="0 0 800 400"></svg>
+                            </div>
+                            
+                            <div class="assembly-status-bar">
+                                <div class="status-metric">
+                                    <span class="label">BAY STATUS:</span>
+                                    <span class="value active-blink" id="assembly-bay-status">AWAITING START</span>
+                                </div>
+                                <div class="status-metric">
+                                    <span class="label">STAGE COMPILATION:</span>
+                                    <span class="value" id="assembly-percent">0%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Side Assembly controls & Steps List -->
+                        <div class="assembly-control-panel">
+                            <div class="assembly-btn-area">
+                                <button class="btn-primary glow-cyan" id="btn-start-assembly" onclick="startAssemblySequence()">
+                                    INITIALIZE ASSEMBLY CYCLE
+                                </button>
+                            </div>
+                            <div class="assembly-steps-container">
+                                <h3>ENGINEERING STEPS LIST</h3>
+                                <div class="steps-list" id="assembly-steps-list">
+                                    <div class="step-placeholder">Run design validation and initialize assembly process.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TAB 3: SHOOTING RANGE -->
+                <section class="tab-content" id="content-range">
+                    <div class="panel-header">
+                        <h2>BALLISTICS TESTING RANGE</h2>
+                        <span class="panel-subtitle">Live fire weapon performance evaluation and physics simulator</span>
+                    </div>
+
+                    <div class="range-workspace">
+                        <!-- Canvas Firing Range -->
+                        <div class="firing-lane-container">
+                            <div class="blueprint-grid-overlay"></div>
+                            <span class="blueprint-corner tl">+</span>
+                            <span class="blueprint-corner tr">+</span>
+                            <span class="blueprint-corner bl">+</span>
+                            <span class="blueprint-corner br">+</span>
+
+                            <div class="range-canvas-wrapper">
+                                <canvas id="range-canvas" width="800" height="420"></canvas>
+                                <div id="range-crosshair-label">AIM WITH MOUSE & CLICK TO FIRE</div>
+                                <div id="range-instruction-card">
+                                    <h3>SHOOTING RANGE CONTROLS</h3>
+                                    <p>Move mouse to aim weapon. Left Click to fire bullet tracers. Reload triggers automatically.</p>
+                                    <p>Targets spawn at distances up to 300m. Steel plates clang on hits.</p>
+                                    <button class="btn-secondary" onclick="dismissInstructions()">ENTER SHOOTING BOX</button>
+                                </div>
+                            </div>
+
+                            <div class="range-weapon-selector">
+                                <div class="form-group inline">
+                                    <label for="range-ammo-selector">Select Live Loadout Ammunition:</label>
+                                    <select id="range-ammo-selector" onchange="changeRangeAmmunition()">
+                                        <option value="Standard FMJ">Standard FMJ (Full Metal Jacket)</option>
+                                        <option value="Armor Piercing">Armor Piercing (AP-Steel Penetrator)</option>
+                                        <option value="Subsonic Heavy">Subsonic Heavy Load</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stats readout & targets scorecard -->
+                        <div class="range-diagnostics-panel">
+                            <div class="telemetry-card">
+                                <h3>LIVE FIRE TELEMETRY</h3>
+                                <div class="telemetry-grid">
+                                    <div class="metric-block">
+                                        <span class="label">ACCURACY</span>
+                                        <span class="value" id="stat-accuracy">0%</span>
+                                        <div class="progress-bar-bg"><div class="progress-bar-fill orange" id="fill-accuracy" style="width: 0%"></div></div>
+                                    </div>
+                                    <div class="metric-block">
+                                        <span class="label">RECOIL VALUE</span>
+                                        <span class="value" id="stat-recoil">0%</span>
+                                        <div class="progress-bar-bg"><div class="progress-bar-fill cyan" id="fill-recoil" style="width: 0%"></div></div>
+                                    </div>
+                                    <div class="metric-block">
+                                        <span class="label">IMPACT DAMAGE</span>
+                                        <span class="value" id="stat-damage">0 HP</span>
+                                        <div class="progress-bar-bg"><div class="progress-bar-fill green" id="fill-damage" style="width: 0%"></div></div>
+                                    </div>
+                                    <div class="metric-block">
+                                        <span class="label">EFFECTIVE RANGE</span>
+                                        <span class="value" id="stat-range">0m</span>
+                                    </div>
+                                    <div class="metric-block">
+                                        <span class="label">RATE OF FIRE</span>
+                                        <span class="value" id="stat-rofire">0 RPM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="range-scorecard">
+                                <h3>TARGET PRACTICE SCORECARD</h3>
+                                <div class="scorecard-row">
+                                    <span>TARGETS SPAWNED:</span>
+                                    <strong id="score-spawned">0</strong>
+                                </div>
+                                <div class="scorecard-row">
+                                    <span>SHOTS FIRED:</span>
+                                    <strong id="score-shots">0</strong>
+                                </div>
+                                <div class="scorecard-row">
+                                    <span>DIRECT HITS:</span>
+                                    <strong id="score-hits">0</strong>
+                                </div>
+                                <div class="scorecard-row">
+                                    <span>TARGET ACCURACY:</span>
+                                    <strong id="score-percent">0%</strong>
+                                </div>
+                                <div class="scorecard-row total">
+                                    <span>FINAL SCORE:</span>
+                                    <strong id="score-total" class="glow-text green">0000</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- RIGHT PANEL: MULTI-AGENT CONTROL CENTER -->
+            <div class="workspace-right">
+                <div class="tactical-panel agent-console">
+                    <div class="panel-header border-bottom">
+                        <h3>MULTI-AGENT CONTROL CENTER</h3>
+                        <span class="panel-subtitle">Agent execution flow & LangChain collaboration logs</span>
+                    </div>
+
+                    <!-- Agent Net Status -->
+                    <div class="agents-status-grid">
+                        <div class="agent-badge active" id="agent-badge-design">
+                            <div class="agent-avatar design-avatar"></div>
+                            <div class="agent-info">
+                                <span class="name">ARCHITECT</span>
+                                <span class="status pulse">STANDBY</span>
+                            </div>
+                        </div>
+                        <div class="agent-badge" id="agent-badge-assembly">
+                            <div class="agent-avatar assembly-avatar"></div>
+                            <div class="agent-info">
+                                <span class="name">ENGINEER</span>
+                                <span class="status">OFFLINE</span>
+                            </div>
+                        </div>
+                        <div class="agent-badge" id="agent-badge-ballistics">
+                            <div class="agent-avatar ballistics-avatar"></div>
+                            <div class="agent-info">
+                                <span class="name">BALLISTICS</span>
+                                <span class="status">OFFLINE</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RAG Source Info -->
+                    <div class="rag-sources-indicator">
+                        <span class="label">RAG DOCUMENT DATABASE:</span>
+                        <div class="loaded-doc-pill" id="rag-indicator">
+                            <span class="status-indicator active-blink"></span>
+                            <span class="text">STANDBY - MANUALS LOADED</span>
+                        </div>
+                    </div>
+
+                    <!-- Live Dialogue log -->
+                    <div class="dialogue-log-area">
+                        <h3>TACTICAL AGENT TRANSMISSIONS LOG</h3>
+                        <div class="dialogue-feed" id="agent-logs-feed">
+                            <div class="log-message system">
+                                <span class="timestamp">[15:00:00]</span>
+                                <span class="sender">SYSTEM:</span>
+                                <span class="text">Initialized LangChain workspace. Document loader loaded manuals for Rifle, Sniper, Shotgun, LMG, and Rotary Cannon. Awaiting user input selection...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Persona commentary text box -->
+                    <div class="persona-commentary-box">
+                        <h3>AGENT BRIEFING & ANALYSIS</h3>
+                        <div class="briefing-content" id="agent-briefing-text">
+                            Select a weapon type to begin. The Weapon Design Architect will query specifications from the RAG local manuals to compile engineering schemas and warn you of any parts or safety issues.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Web Application Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
